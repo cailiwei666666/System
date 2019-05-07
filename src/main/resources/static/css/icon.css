@@ -1,0 +1,15 @@
+		/*默认*/
+		.tree-icon{
+			background:url('static/img/home.png') no-repeat center center ;
+		}
+	/*折叠时图片*/
+		.tree-folder{
+			background:url('static/img/home.png'') no-repeat center center !important;
+		} 
+		
+		/*展开时图片*/
+		.tree-folder-open
+		{
+			background:url('static/img/ss.png') no-repeat center center !important;
+		}
+		

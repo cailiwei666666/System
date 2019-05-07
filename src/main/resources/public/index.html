@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/themes/default/easyui.css" />
+    <link rel="stylesheet" href="../css/themes/icon.css" />
+    <link rel="stylesheet" href="../css/demo.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js" ></script>
+</head>
+<body>
+
+
+<div>
+    <a id="btn" class="easyui-linkbutton" data-options="iconCls:'icon-add'" onclick="addStudent()">增加</a>
+    <a id="btn" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="updateStudent()">修改</a>
+    <a id="btn" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" onclick="remove()">删除</a>
+</div>
+
+<table id="tab"  url:'' rownumbers="true" pagination="true"
+data-options="method:'get',singleSelect:true,fit:true,toolbar:'#buttons5'">
+</table>
+</body>
+
+
+<script type="text/javascript" th:inline="none">
+    $(function(){
+        $('#tab').datagrid({
+            url:'',
+            fit:true,
+            singleSelect:true,
+            pagination:true,
+            pagePosition:'bottom',
+            pageNumber:1,
+            pageSize:10,
+            pageList:[10,20,30,40,50],
+            columns:[[
+                {field:'id',title:'学生编号',width:100,align:'center'},
+                {field:'UserName',title:'学生姓名',width:100,align:'center'},
+                {field:'Course',title:'科目',width:100,align:'center'},
+                {field:'Score',title:'成绩',width:100,align:'center'},
+            ]]
+        })
+    })
+  </script>
+</html>

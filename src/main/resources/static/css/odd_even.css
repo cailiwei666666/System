@@ -1,0 +1,11 @@
+#head{
+	background-color: white;
+}
+
+table tr:nth-of-type(odd){
+	background-color: #abc;
+}
+
+table tr:nth-of-type(even){
+	background-color: white;
+}
